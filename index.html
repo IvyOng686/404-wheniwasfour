@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page Not Found - WheniWasFour</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Announcement bar */
+    .announcement-bar {
+      background-color: #2b5f53;
+      color: white;
+      padding: 40px;
+      padding-top: 7px;
+      padding-bottom: 7px;
+      text-align: center;
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .social-icons a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Currency selector (announcement bar) */
+    .announcement-bar .currency-selector select {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 12px;
+      cursor: pointer;
+    }
+
+    /* Header – updated background */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #f0f0f0;
+      background-color: #fcf9f6;
+    }
+
+    .logo img {
+      max-width: 140px;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-center a {
+      color: #2b5f53;
+      text-decoration: none;
+      font-size: 13.5px;
+      font-weight: 500;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-right a {
+      color: #2b5f53;
+    }
+
+    /* Main content (404) */
+    .main-content {
+      text-align: center;
+      padding: 80px 40px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+    }
+
+    .main-content img {
+      width: 80%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+
+    .error-image-container {
+      margin-bottom: 40px;
+      height: 180px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main-content h1 {
+      font-size: 24px;
+      margin-top: 60px;
+      margin-bottom: 0px;
+      color: #333
+      font-weight: 500;
+    }
+
+    .main-content p {
+      margin-bottom: 0px;
+      color: #666;
+    }
+
+    .back-link {
+      color: #e17055;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer – updated background */
+    .footer {
+      background-color: #f7f0e5;
+      margin-top: auto;
+      color: #333;
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 50px;
+      padding-bottom: 40px;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 60px;
+    }
+
+    .footer-about {
+      max-width: 350px;
+      font-size: 13.5px;
+      line-height: 1.5;
+    }
+
+    .footer-about .social-icons {
+      margin-top: 20px;
+    }
+
+    .footer-about .social-icons a {
+      color: #333;
+    }
+
+    .footer h3 {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .footer-middle p {
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .newsletter-form input {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    .subscribe-btn {
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background-color: #2b5f53;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: fit-content;
+      font-size: 12px;
+    }
+
+    .footer-links-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+  line-height: 1.4;
+  margin-bottom: 2px;
+      color: #666;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .footer-links a:hover {
+      color: #333;
+     text-decoration: underline;}
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      font-size: 10.5px;
+      color: #666;
+    }
+
+    /* Footer currency selector – white box */
+    .footer-bottom .currency-selector select {
+      padding: 8px 12px;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+    }
+
+    .payment-methods {
+      display: flex;
+      gap: 8px;
+    }
+
+    .payment-methods img {
+      height: 20px;
+    }
+
+    .earn-rewards {
+      position: fixed;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #333;
+      color: white;
+      padding: 12px 8px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      cursor: pointer;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    /* Currency selector arrow indicator */
+    .currency-selector {
+      position: relative;
+    }
+
+    /* Unbold footer headings */
+    .footer h3 {
+      font-family: 'Segoe UI', sans-serif;
+      font-weight: normal;
+    }
+
+    /* Arrange footer selector and copyright */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-top: 30px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+    }
+
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-left .currency-selector select {
+      width: 200px;
+      height: 38px;
+      line-height: 38px;
+      padding: 8px 32px 8px 12px;
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: #fff;
+      color: #333;
+      cursor: pointer;
+    }
+
+    /* Tablet (≤768px) */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 60px 20px;
+  }
+  .error-image-container img {
+    max-width: 70%;
+    height: auto;
+  }
+  .main-content h1 {
+    font-size: 32px;
+  }
+  .main-content p {
+    font-size: 18px;
+  }
+}
+
+/* Phone (≤480px) */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 40px 15px;
+  }
+  .error-image-container img {
+    max-width: 80%;
+    height: auto;
+  }
+  .main-content h1 {
+    font-size: 36px;
+  }
+  .main-content p {
+    font-size: 20px;
+  }
+}
+
+/* Memory-Match Card Styles */
+.card { width: 120px; height: 120px;
+  perspective: 800px;
+  margin: 8px;
+}
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-front {
+  background: #d4f8e8;
+}
+.card-back {
+  transform: rotateY(180deg);
+  background: white;
+}
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+  
+/* Memory Match container pastel background */
+#memory-game-container { background-color: #fef6e4; /* Light pastel peach */
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* Memory Match Styles */
+.card { width: 120px; height: 120px; perspective: 800px; margin: 8px; }
+.card-inner { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+.card.flip .card-inner { transform: rotateY(180deg); }
+.card-front, .card-back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; }
+.card-front { background: #d4f8e8; }
+.card-back { transform: rotateY(180deg); background: white; }
+.fade-in { animation: fadeIn 0.8s ease forwards; opacity: 0; }
+@keyframes fadeIn { to { opacity: 1; } }
+/* Pastel background under cards */
+#memory-game-container { background-color: #fef6e4; padding:30px; border-radius:12px; }
+</style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+  <div class="announcement-bar">
+
+    <div class="social-icons">
+      <a href="https://www.facebook.com/wheniwasfour" target="_blank">
+        <img src="fb-green-white-nobg.png" alt="Facebook" width="24" height="24">
+      </a>
+      <a href="https://www.instagram.com/wheniwasfour_sg?igsh=cGR4YWtuM2RjbHFh" target="_blank">
+        <img src="ig-white-nobg.png" alt="Instagram" width="24" height="24">
+      </a>
+      <a href="https://www.tiktok.com/@wheniwasfour?_t=ZS-8vpEmMT6ESm&_r=1" target="_blank">
+        <img src="tiktok-white-nobg.png" alt="TikTok" width="24" height="24">
+      </a>
+    </div>
+
+    <span>Free Registered Mail On Local Orders Above $49.90</span>
+    <div class="currency-selector">
+      <select>
+        <option>Singapore (SGD $)</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      <a href="https://shop.wheniwasfour.com/"><img src="wheniwasfour-logo20246.avif" alt="Logo"></a>
+    </div>
+    <nav class="nav-center">
+      <a href="https://shop.wheniwasfour.com/collections/new">New</a>
+      <a href="https://shop.wheniwasfour.com/collections/all-products">Shop</a>
+      <a href="https://shop.wheniwasfour.com/">Occasions</a>
+      <a href="https://shop.wheniwasfour.com/collections">Collections</a>
+      <a href="https://shop.wheniwasfour.com/collections/sale">Sale</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="https://shop.wheniwasfour.com/account/login">
+        <img src="user-bold-green.png" alt="Profile" style="height: 44px;">
+      </a>
+      <a href="https://shop.wheniwasfour.com/collections/all-products">
+        <img src="search-bold-green.png" alt="Search" style="height: 44px;">
+      </a>
+      <a href="/cart">
+        <img src="cart-bold-green.png" alt="Cart" style="height: 44px;">
+      </a>
+    </div>
+
+  </header>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="error-image-container">
+      <img src="404_pagenotfound.png" alt="404 Error">
+    </div>
+    <div id="main-message" style="margin-bottom:10px;">
+    <h1>Oops! We can’t find that page.</h1>
+</div>
+<!-- Invitation Message -->
+    <p style="color:#2b5f53; font-size:14px; font-weight:500; margin-top:30px; margin-bottom:20px; text-align:center;">
+      Ready for a trip down memory lane? Match the cards to find your way home!
+    </p>
+
+    <!-- Start Game Button -->
+    <div style="text-align:center; margin-bottom:10px; padding-bottom:10px">
+      <button id="start-game-btn" style="padding:10px 20px; background:#2b5f53; color:#fff; border:none; border-radius:5px; cursor:pointer; font-size:15px;">
+        Start Memory Match
+      </button>
+    </div>
+
+    <!-- Game Board (hidden until click) -->
+    <div id="memory-game-container" style="display:none; text-align:center; margin-bottom:30px;">
+      <h2 style="color:#2b5f53; font-size:20px; margin-bottom:15px;">Find the matching memories!</h2>
+      <div id="game-board" style="display:grid; grid-template-columns:repeat(3,120px); grid-gap:15px; justify-content:center;"></div>
+      
+    <p id="game-message" style="margin-top:20px; color:#e17055; font-size:16px;"></p>
+      <!-- Win-state Back Button (hidden until you win) -->
+      <div id="win-button-container" style="display:none; margin-top:20px; text-align:center;">
+        <a href="https://shop.wheniwasfour.com/" 
+           id="win-back-btn"
+           style="padding:10px 20px; background:#e17055; color:#fff; text-decoration:none; border-radius:5px; font-size:16px; cursor:pointer; display:inline-block;">
+          Back to home
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <p><i>WHENIWASFOUR</i>, a Singaporean design studio, turns everyday moments into creative lifestyle products with a local twist, celebrating simple joys and a balanced life.</p>
+        <div class="social-icons">
+          <!-- SVG icons omitted for brevity -->
+        </div>
+      </div>
+      <div class="footer-middle">
+        <h3>NEWSLETTER</h3>
+        <p>Sign up for exclusive offers, original stories, events and more.</p>
+        <div class="newsletter-form">
+          <input type="email" placeholder="Your email">
+          <button class="subscribe-btn">SUBSCRIBE</button>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-links-container">
+          <div class="footer-links">
+            <a href="https://shop.wheniwasfour.com/pages/about-us"><h3>ABOUT US</h3></a>
+            <a href="https://shop.wheniwasfour.com/pages/find-us">CONTACT US</a>
+            <a href="https://shop.wheniwasfour.com/pages/wholesale-enquiry">WHOLESALE</a>
+            <a href="https://shop.wheniwasfour.com/pages/corporatecollaborations">COLLABORATIONS</a>
+            <a href="https://shop.wheniwasfour.com/blogs/media-features">MEDIA FEATURES</a>
+            <a href="https://shop.wheniwasfour.com/pages/careers">CAREER</a>
+          </div>
+          <div class="footer-links">
+            <a href="https://shop.wheniwasfour.com/pages/shipping-info"><h3>SHIPPING INFO</h3></a>
+            <a href="https://shop.wheniwasfour.com/pages/exchange-policy">EXCHANGE POLICY</a>
+            <a href="https://shop.wheniwasfour.com/policies/terms-of-service">TERMS OF SERVICE</a>
+            <a href="https://shop.wheniwasfour.com/pages/faq">FAQS</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-left">
+        <div class="currency-selector">
+          <select>
+            <option>Singapore (SGD $)</option>
+          </select>
+        </div>
+        <div class="copyright">
+          © 2025 wheniwasfour | 小时候. Ecommerce Software by Shopify
+        </div>
+      </div>
+
+<div class="payment-methods">
+  <img src="payment method.png" alt="Payment Methods" style="height: 55px;">
+</div>
+
+    </div>
+
+  </footer>
+
+  <div class="earn-rewards">Earn Rewards</div>
+
+<script>
+document.getElementById('start-game-btn').addEventListener('click', function() {
+  document.getElementById('main-message').style.display = 'none';
+  const container = document.getElementById('memory-game-container');
+  container.classList.add('fade-in');
+  container.style.display = 'block';
+  generateCards();
+});
+
+function generateCards() {
+  const pastel = ['#d4f8e8','#d4e9f8','#f8d4e8','#fef3c7','#e8d4f8'];
+  const board = document.getElementById('game-board');
+  const cards = [
+    {name:'biscuit',img:'biscuit.png'},
+    {name:'playground',img:'playground.png'},
+    {name:'drink',img:'drink.png'},
+    {name:'biscuit',img:'biscuit.png'},
+    {name:'playground',img:'playground.png'},
+    {name:'drink',img:'drink.png'}
+  ].sort(() => 0.5 - Math.random());
+  board.innerHTML = '';
+  let first = null, second = null, lock = false, matches = 0;
+  cards.forEach(card => {
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `
+      <div class="card-inner">
+        <div class="card-front" style="background:${pastel[Math.floor(Math.random()*pastel.length)]}"></div>
+        <div class="card-back"><img src="${card.img}" style="width:80%;height:80%;object-fit:contain;"></div>
+      </div>`;
+    board.appendChild(el);
+    el.dataset.name = card.name;
+    el.addEventListener('click', () => {
+      if(lock || el.classList.contains('flip')) return;
+      el.classList.add('flip');
+      if(!first) {
+        first = el;
+      } else {
+        second = el; lock = true;
+        if(first.dataset.name === second.dataset.name) {
+          matches++;
+          [first, second] = [null, null]; lock = false;
+          if(matches === 3) document.getElementById('game-message').textContent='Yay! You found all the sweet memories! 🎉';
+        } else {
+          setTimeout(() => {
+            first.classList.remove('flip');
+            second.classList.remove('flip');
+            [first, second] = [null, null]; lock = false;
+          }, 700);
+        }
+      }
+    });
+  });
+}
+</script>
+
+
+<script>
+document.getElementById('start-game-btn').addEventListener('click', function() {
+  document.getElementById('main-message').style.display = 'none';
+  const container = document.getElementById('memory-game-container');
+  container.classList.add('fade-in');
+  container.style.display = 'block';
+  generateCards();
+});
+function generateCards() {
+  const pastel = ['#d4f8e8','#d4e9f8','#f8d4e8','#fef3c7','#e8d4f8'];
+  const board = document.getElementById('game-board');
+  const cards = [
+    {name:'biscuit',img:'biscuit.png'},
+    {name:'playground',img:'playground.png'},
+    {name:'drink',img:'drink.png'},
+    {name:'biscuit',img:'biscuit.png'},
+    {name:'playground',img:'playground.png'},
+    {name:'drink',img:'drink.png'}
+  ].sort(() => 0.5 - Math.random());
+  board.innerHTML = '';
+  let first=null, second=null, lock=false, matches=0;
+  cards.forEach(card => {
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `
+      <div class="card-inner">
+        <div class="card-front" style="background:${pastel[Math.floor(Math.random()*pastel.length)]}"></div>
+        <div class="card-back"><img src="${card.img}" style="width:80%;height:80%;object-fit:contain;"></div>
+      </div>`;
+    board.appendChild(el);
+    el.dataset.name = card.name;
+    el.addEventListener('click', () => {
+      if(lock || el.classList.contains('flip')) return;
+      el.classList.add('flip');
+      if(!first) first = el;
+      else {
+        second = el; lock = true;
+        if(first.dataset.name === second.dataset.name) {
+          matches++; first=null; second=null; lock=false;
+          if(matches === 3) {
+            document.getElementById('game-message').textContent = 'Yay! You found all the sweet memories! 🎉';
+            document.getElementById('win-button-container').style.display = 'block';
+          }
+        } else {
+          setTimeout(() => { first.classList.remove('flip'); second.classList.remove('flip'); first=null; second=null; lock=false; }, 700);
+        }
+      }
+    });
+  });
+}
+</script>
+</body>
+</html>
